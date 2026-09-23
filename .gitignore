@@ -1,0 +1,10 @@
+node_modules/
+dist/
+ui/dist/
+*.tgz
+.env
+.env.*
+!.env.example
+.zcode
+.agents/
+.DS_Store

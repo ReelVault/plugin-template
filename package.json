@@ -1,0 +1,15 @@
+{
+	"name": "reelvault-plugin-template",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"postinstall": "bun scripts/postinstall.ts",
+		"check-types": "tsc --noEmit --pretty",
+		"build": "bun scripts/build.ts"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.4.0",
+		"fflate": "^0.8.3",
+		"typescript": "^7.0.2"
+	}
+}

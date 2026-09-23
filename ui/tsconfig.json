@@ -1,0 +1,43 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"lib": [
+			"ESNext",
+			"DOM",
+			"DOM.Iterable"
+		],
+		"jsx": "react-jsx",
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"types": [
+			"vite/client"
+		],
+		"paths": {
+			"reelvault-sdk": [
+				"../../reelvault/sdk/index.ts",
+				"../../ReelVault.Server/sdk/index.ts",
+				"../server/sdk/index.ts"
+			],
+			"reelvault-sdk/*": [
+				"../../reelvault/sdk/*",
+				"../../ReelVault.Server/sdk/*",
+				"../server/sdk/*"
+			],
+			"@sdk/*": [
+				"../../reelvault/sdk/*",
+				"../../ReelVault.Server/sdk/*",
+				"../server/sdk/*"
+			]
+		}
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"vite.config.ts",
+		"schema.ts"
+	]
+}

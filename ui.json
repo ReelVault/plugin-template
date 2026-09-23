@@ -1,0 +1,10 @@
+{
+	"name": "Plugin Template",
+	"version": "1.0.0",
+	"entry": "./dist/ui/index.js",
+	"pages": [{ "id": "home", "path": "home", "name": "Template", "icon": "Puzzle", "tag": "rv-template-page", "nav": "user" }],
+	"dialogs": [{ "id": "hello", "title": "Say hello", "icon": "Sparkles", "size": "md", "schemaRef": "./dist/ui/schema.json" }],
+	"slots": {
+		"player-footer": [{ "label": "Say hello", "icon": "Sparkles", "priority": 50, "action": { "type": "dialog", "dialog": "hello" } }]
+	}
+}

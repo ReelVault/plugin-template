@@ -1,0 +1,8 @@
+{
+	"id": "org.example.template",
+	"name": "Plugin Template",
+	"version": "1.0.0",
+	"entry": "./index.ts",
+	"description": "A minimal ReelVault plugin — duplicate this directory to start your own.",
+	"capabilities": ["httpRoute", "storage"]
+}
