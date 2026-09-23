@@ -9,12 +9,7 @@
 		"types": ["@types/bun"],
 		"skipLibCheck": true,
 		"isolatedModules": true,
-		"forceConsistentCasingInFileNames": true,
-		"paths": {
-			"reelvault-sdk": ["../reelvault/sdk/index.ts", "../ReelVault.Server/sdk/index.ts", "./server/sdk/index.ts"],
-			"reelvault-sdk/*": ["../reelvault/sdk/*", "../ReelVault.Server/sdk/*", "./server/sdk/*"],
-			"@sdk/*": ["../reelvault/sdk/*", "../ReelVault.Server/sdk/*", "./server/sdk/*"]
-		}
+		"forceConsistentCasingInFileNames": true
 	},
 	"include": ["*.ts", "scripts/**/*.ts"],
 	"exclude": ["node_modules", "dist", "ui"]

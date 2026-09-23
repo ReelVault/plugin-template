@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { definePluginElement, mountShadow } from "reelvault-sdk/ui";
+import { definePluginElement, mountShadow } from "@reelvault/sdk/ui";
 import { TemplatePage } from "./app";
 import { PluginHostProvider } from "./host-context";
 import css from "./styles.css?inline";

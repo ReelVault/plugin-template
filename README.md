@@ -37,17 +37,10 @@ scripts/build.ts   bundles + zips the plugin
 
 ## Develop
 
-The `reelvault-sdk` package is **not published to npm** — TypeScript and the UI
-build resolve it to the SDK sources in a local server checkout:
-
-- `scripts/postinstall.ts` links the SDK into `node_modules/` on `bun install`
-  (found next to this checkout, in CI's `server/`, or via `REELVAULT_SDK_PATH`);
-- both `tsconfig.json` files map `reelvault-sdk` via `paths`.
-
-Adjust those relative paths if your plugin checkout does not sit next to a
-server clone (`reelvault/`, previously `ReelVault.Server/`). The backend bundle
-keeps `reelvault-sdk` external — at runtime the host swaps the module for its
-own shim, so the server never loads your bundled copy.
+`@reelvault/sdk` is a regular **devDependency**: it provides the types and the
+UI/schema vocabulary for your build. Your backend bundle keeps it **external** —
+at runtime the host swaps the module for its own copy, so the server never loads
+your bundled version and the plugin always matches the server's SDK.
 
 ```bash
 bun install          # installs backend + ui dependencies (skips ui/ when absent)

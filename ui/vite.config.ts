@@ -1,8 +1,7 @@
 import { defineConfig } from "vite";
 
-// `reelvault-sdk` is not published to npm — scripts/postinstall.ts links it
-// into node_modules from a server checkout next to this plugin, and that link
-// resolves here (at runtime the host swaps the module for its own shim anyway).
+// `@reelvault/sdk` resolves from node_modules (a regular devDependency) — at
+// runtime the host swaps the module for its own copy anyway.
 export default defineConfig({
 	define: {
 		"process.env.NODE_ENV": JSON.stringify("production"),

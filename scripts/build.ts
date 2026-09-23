@@ -3,7 +3,7 @@
  * Builds this plugin into `dist/<id>-<version>.zip`, ready to install through
  * **Admin → Plugins → Install from upload** (or to publish in a catalog).
  *
- *   1. bundle `index.ts` with Bun (`reelvault-sdk` stays external — the host
+ *   1. bundle `index.ts` with Bun (`@reelvault/sdk` stays external — the host
  *      provides the SDK itself),
  *   2. build the `ui/` bundle (vite) and compile `ui/schema*.ts` to JSON,
  *   3. patch `plugin.json` to point at the bundled entry,
@@ -81,7 +81,7 @@ async function run(command: string[], cwd: string): Promise<void> {
 async function bundleEntry(sourceDir: string, manifest: PluginManifest): Promise<string> {
 	const entrySource = join(sourceDir, manifest.entry);
 	const outDir = join(STAGING_DIR, "dist");
-	await run(["bun", "build", entrySource, "--outdir", outDir, "--target", "bun", "--external", "reelvault-sdk"], sourceDir);
+	await run(["bun", "build", entrySource, "--outdir", outDir, "--target", "bun", "--external", "@reelvault/sdk"], sourceDir);
 	const base = manifest.entry.split("/").pop()?.replace(TS_EXTENSION, ".js") ?? "index.js";
 	return `./dist/${base}`;
 }

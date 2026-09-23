@@ -1,4 +1,4 @@
-import { button, defineSchema, row, stack, text, textField } from "reelvault-sdk/ui/schema";
+import { button, defineSchema, row, stack, text, textField } from "@reelvault/sdk/ui/schema";
 
 /**
  * Declarative schema for the "Say hello" dialog. The host renders it with its

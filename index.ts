@@ -1,4 +1,4 @@
-import { definePlugin, ok, route, t, updateStored } from "reelvault-sdk/plugin";
+import { definePlugin, ok, route, t, updateStored } from "@reelvault/sdk/plugin";
 import { config } from "./config";
 
 const Counter = t.Object({ value: t.Number() });
